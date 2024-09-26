@@ -3,11 +3,11 @@ import { createUser, getAllUser, getUSer } from '../service/user.service'
 
 export const getListUser = async (req:Request,res:Response)=>{
     try {
-        const listUser = await getAllUser()
-        if(!listUser)
+        const listOrder = await getAllUser()
+        if(!listOrder)
             res.status(400).send({message:"Fail to get all user"})
         else
-            res.status(200).send({listUser})
+            res.status(200).send({listOrder})
     } catch (error) {
             res.status(400)
     }
